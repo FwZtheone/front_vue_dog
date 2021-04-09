@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <NavigationBar></NavigationBar> 
+    <main v-if="!isLogin">
+      
+      <Carousel class="is-hidden-mobile "  > </Carousel>
+    </main>
+
+    <section  style="height: 100vh;">
+        <router-view> </router-view>
+    </section>
+    
+ 
+      <Footer v-if="!isLogin"></Footer>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import NavigationBar from './components/NavigationBar'
+import Carousel from './components/Carousel';
+import Footer from './components/Footer';
 export default {
   name: 'App',
+  computed : {
+    isLogin : function(){
+      return this.$store.getters.isLogin;
+    }
+  },
   components: {
-    HelloWorld
+    NavigationBar,
+    Carousel,
+    Footer
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+
 </style>
