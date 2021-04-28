@@ -3,7 +3,7 @@ import App from './App.vue'
 // import Board from './components/Board.vue';
 
 import 'buefy/dist/buefy.css';
-import { Navbar, Carousel, Input ,Field, Table, Button, Notification, Sidebar, Menu, Switch, Select, Icon, Tabs,Dropdown, Autocomplete} from 'buefy';
+import { Upload, Datepicker, Navbar, Carousel, Input ,Field, Table, Button, Notification, Sidebar, Toast, Menu, Switch, Select, Icon, Tabs,Dropdown, Autocomplete, Modal} from 'buefy';
 import VueRouter from 'vue-router';
 import {routes} from './routes';
 
@@ -13,8 +13,9 @@ import {store} from './store/store';
 Vue.config.productionTip = false
 Vue.use(Navbar);
 Vue.use(VueRouter);
+Vue.use(Upload);
 Vue.use(Dropdown);
-
+Vue.use(Datepicker);
 Vue.use(Carousel);
 Vue.use(Input);
 Vue.use(Field);
@@ -23,7 +24,8 @@ Vue.use(Menu);
 Vue.use(Switch);
 Vue.use(Select);
 Vue.use(Table);
-
+Vue.use(Modal);
+Vue.use(Toast);
 Vue.use(Icon);
 Vue.use(Autocomplete);
 

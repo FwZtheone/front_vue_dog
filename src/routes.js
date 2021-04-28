@@ -5,6 +5,10 @@ import Inscription from "./components/Inscription.vue";
 
 import AllinformationBoardAmin from "./components/AllInformationBoardAdmin";
 import TableUsers from './components/admin/TableUsers.vue';
+import TableDogs from './components/admin/TableDogs.vue';
+
+
+
 export const routes = [
   { path: "/", component: Acceuil },
   { path: "/connexion", component: Connexion },
@@ -18,9 +22,27 @@ export const routes = [
         component: AllinformationBoardAmin,
       },
       {
-        path:'users',
-        component: TableUsers
+        path:'admin-users',
+        component: TableUsers,
+        
+      },
+      {
+        path:'admin-chiens',
+        component: TableDogs,
+        
       }
     ],
+    beforeEnter:  async (to,from,next) => {
+      
+      const {user} =  await JSON.parse(localStorage.getItem("vuex"));
+        
+      if(user.rule){
+        next();
+      }else{
+        next({path: "/"})
+      }
+      
+     
+    }
   },
 ];

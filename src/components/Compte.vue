@@ -14,8 +14,11 @@
         <div class="is-child is-flex-grow-1">
           <div class="menu">
             <p
-              class="menu-label has-text-centered  is-flex is-justify-content-center is-align-items-center  is-capitalized has-text-weight-semibold is-size-5  title-label "
-              style="background-color: #3e8ef7; color:white; height:50px;"
+              class="
+              has-text-white
+              has-background-primary
+              menu-label has-text-centered  is-flex is-justify-content-center is-align-items-center  is-capitalized has-text-weight-semibold is-size-5  title-label "
+              style=" color:white; height:50px;"
             >
               administrateur
             </p>
@@ -54,34 +57,6 @@
                   </li>
                 </ul>
               </li>
-              <li class="pt-4">
-                <p class="menu-label pl-2 is-capitalized is-size-6 title-label">
-                  tables
-                </p>
-                <ul>
-                  <li>
-                    <b-navbar-item
-                      tag="router-link"
-                      :to="{ path: '/compte/users' }"
-                      >Utilisateurs</b-navbar-item
-                    >
-                  </li>
-                  <li>
-                    <b-navbar-item
-                      tag="router-link"
-                      :to="{ path: '/compte/chiens' }"
-                      >Chiens</b-navbar-item
-                    >
-                  </li>
-                  <li>
-                    <b-navbar-item
-                      tag="router-link"
-                      :to="{ path: '/compte/activites' }"
-                      >Activitées</b-navbar-item
-                    >
-                  </li>
-                </ul>
-              </li>
             </ul>
           </div>
         </div>
@@ -89,7 +64,9 @@
 
       <!-- <AllinformationBoardAmin></AllinformationBoardAmin> -->
       <div class=" tile is-parent is-10 pl-0 pb-0">
-        <router-view></router-view>
+      
+          <router-view></router-view>
+       
       </div>
     </div>
   </div>
@@ -144,4 +121,8 @@ export default {
 .navbar-left {
   position: fixed;
 }
+
+
+
+
 </style>

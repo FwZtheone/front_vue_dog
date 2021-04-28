@@ -83,6 +83,8 @@ export default {
                     password : this.password
                 })
                 .then( ({data}) => {
+                    
+
                     if(data.errors){
                         this.messagesError = data.errors.slice(0);
                         console.log(this.messagesError)
@@ -93,6 +95,7 @@ export default {
                         this.isError = true;
                         this.danger();
                     }
+                    
 
                     else{
                         //connexion réussie

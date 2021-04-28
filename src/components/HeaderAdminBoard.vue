@@ -1,5 +1,5 @@
-<template>
-  <div class="is-child tile box ">
+<template >
+  <div class="is-child tile box " >
     <div class="level">
       <div class="level-left">
         <div class="level-item">
@@ -41,19 +41,23 @@
                   Connecté en tant que <b>{{nom}} {{prenom}} </b>
                 </b-dropdown-item>
                 <hr class="dropdown-divider" />
-                <b-dropdown-item value="home" aria-role="menuitem">
+                <b-dropdown-item value="home" aria-role="menuitem" class="level m-0">
                   <b-icon icon="home"></b-icon>
-                  Acceuil
+                  <div class="level-item">Acceuil</div>
                 </b-dropdown-item>
     
                 <hr class="dropdown-divider" aria-role="menuitem" />
-                <b-dropdown-item value="settings">
-                  <b-icon icon="settings"></b-icon>
-                  Paramétre
+                <b-dropdown-item value="settings" class="level m-0">
+                  <b-icon icon="cog"></b-icon>
+                  <span class="level-item">
+                    Paramètres
+                  </span>
                 </b-dropdown-item>
-                <b-dropdown-item value="logout" aria-role="menuitem" @click="logout">
+                <b-dropdown-item value="logout" aria-role="menuitem" @click="logout" class="level navbar-item">
                   <b-icon icon="logout"></b-icon>
-                  Déconnexion
+                  <div class="level-item">
+                    Déconnexion
+                  </div>
                 </b-dropdown-item>
               </b-dropdown>
             </div>
@@ -97,5 +101,10 @@ export default {
 <style scoped>
 .dropdown-menu {
   left: -180px !important;
+}
+
+
+.navbar-item:hover{
+  color: rgba(226, 106, 106, 1);
 }
 </style>
