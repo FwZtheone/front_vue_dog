@@ -1,5 +1,6 @@
 <template>
     <div class="mr-4 ml-4 mt-4">
+    <p>j'adore vuejs !!!</p>
         <p class="is-size-2">lorem title</p>
         <p class="has-text-justified">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas recusandae veritatis perferendis. Reprehenderit quas eveniet iste sapiente nobis deserunt libero? Quaerat architecto quasi, nisi itaque velit natus cumque minima quia!
         Minus nemo natus hic totam voluptates dignissimos iure nostrum est consequatur, odio expedita accusantium quae. Architecto quia perspiciatis porro iusto exercitationem, quisquam alias obcaecati inventore adipisci vero reprehenderit omnis itaque!
